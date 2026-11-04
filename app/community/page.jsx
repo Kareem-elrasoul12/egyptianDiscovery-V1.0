@@ -1,3 +1,9 @@
-import {getPublicLeaderboard,getPublicReviews} from "../../src/lib/data/public";
-export const metadata={title:"Community · Egyptian Discovery"};
-export default async function CommunityPage(){const [members,reviews]=await Promise.all([getPublicLeaderboard(12),getPublicReviews(8)]);return <main className="listing-page"><div className="page-intro"><p className="eyebrow">THE PEOPLE YOU MEET ALONG THE WAY <i/></p><h1>Good journeys travel further.</h1><p>Member milestones, shared stories, and the small things that make the next trip better.</p></div><div className="account-grid"><section className="account-panel"><h2>This month’s explorers</h2>{members.length?<div className="leaderboard">{members.map(member=><article className="leaderboard-row" key={member.profile_id}><b>#{member.rank}</b><strong>{member.display_name}</strong><span>{member.points} points</span></article>)}</div>:<p>Leaderboard results appear here once members earn points through confirmed trips and other qualifying activities. No preview scores are shown.</p>}<p className="small-note">Points are earned for completed qualifying activities. Admins can adjust scoring and rewards.</p></section><section className="account-panel"><h2>Traveler notes</h2>{reviews.length?reviews.map(review=><article className="review-row" key={review.id}><div className="stars">{"★".repeat(review.rating)}{"☆".repeat(5-review.rating)}</div><strong>{review.display_name||"Explorer"}</strong><p>{review.review_en}</p><small>{review.trip_name_en}</small></article>):<p>Verified traveler reviews will appear after a confirmed trip. We do not use placeholder testimonials.</p>}</section></div><section className="account-panel"><h2>Invite a travel companion</h2><p>Sign in to find your personal referral code. Referral rewards are applied after the referred traveler completes a qualifying booking, with duplicate rewards prevented.</p><a className="button button-dark" href="/account">View your referral code ↗</a></section></main>}
+import { getPublicLeaderboard, getPublicReviews } from "../../src/lib/data/public";
+import CommunityPageContent from "../../src/components/community-page";
+
+export const metadata = { title: "Community · Egyptian Discovery" };
+
+export default async function CommunityPage() {
+  const [members, reviews] = await Promise.all([getPublicLeaderboard(12), getPublicReviews(8)]);
+  return <CommunityPageContent members={members} reviews={reviews} />;
+}

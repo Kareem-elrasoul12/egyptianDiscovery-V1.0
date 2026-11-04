@@ -13,7 +13,7 @@ function mapDestination(row) {
 function mapTrip(row, demand) {
   const preferred = row.preferred_dates || [];
   const images = row.images?.length ? row.images : [row.hero_image || "photo-1500530855697-b586d89ba3ee"];
-  return { ...row, id: row.slug, dbId: row.id, name: row.name_en, ar: row.name_ar, description: row.description_en || "", descriptionAr: row.description_ar || "", place: row.destinations?.name_en || "Egypt", placeAr: row.destinations?.name_ar || "مصر", type: row.trip_type, typeAr: row.trip_type, duration: `${row.duration_days} days`, durationAr: `${row.duration_days} أيام`, price: `${row.currency || "EGP"} ${Number(row.price_per_person).toLocaleString("en-EG")}`, date: row.departure_date || preferred[0] || "Dates to be confirmed", dateAr: row.departure_date || preferred[0] || "سيتم تحديد التاريخ", image: row.hero_image || images[0], images, note: row.itinerary_en?.[0]?.title || "Agency planned journey", noteAr: row.itinerary_ar?.[0]?.title || "رحلة بتخطيط الوكالة", paidTravelers:demand?.paid_travelers||0, demandStatus:demand?.demand_status||row.status, preview: false };
+  return { ...row, id: row.slug, dbId: row.id, name: row.name_en, ar: row.name_ar, description: row.description_en || "", descriptionAr: row.description_ar || "", place: row.destinations?.name_en || "Egypt", placeAr: row.destinations?.name_ar || "مصر", placeSlug: row.destinations?.slug || "", type: row.trip_type, typeAr: row.trip_type, duration: `${row.duration_days} days`, durationAr: `${row.duration_days} أيام`, price: `${row.currency || "EGP"} ${Number(row.price_per_person).toLocaleString("en-EG")}`, date: row.departure_date || preferred[0] || "Dates to be confirmed", dateAr: row.departure_date || preferred[0] || "سيتم تحديد التاريخ", image: row.hero_image || images[0], images, note: row.itinerary_en?.[0]?.title || "Agency planned journey", noteAr: row.itinerary_ar?.[0]?.title || "رحلة بتخطيط الوكالة", paidTravelers:demand?.paid_travelers||0, demandStatus:demand?.demand_status||row.status, preview: false };
 }
 
 export async function getPublicDestinations() {
@@ -27,7 +27,7 @@ export async function getPublicDestinations() {
 export async function getPublicTrips({ destinationId, limit } = {}) {
   if (!isSupabaseConfigured()) return isDemoMode() ? previewTrips.map((item,index) => ({ ...item, preview: true, demoAvailable:true, priceValue:[4800,3250,1650][index]||2400, min_travelers:[13,16,10][index]||12, max_capacity:[24,26,22][index]||24, paidTravelers:[9,16,5][index]||0, status:["gathering","under_review","gathering"][index]||"gathering", preferred_dates:["2026-12-12","2027-01-09"], booking_deadline:"2026-12-05" })) : [];
   const supabase = await createClient();
-  let query = supabase.from("trips").select(`${tripFields},destinations(name_en,name_ar)`).in("status", ["gathering", "under_review", "confirmed", "fully_booked"]).order("created_at", { ascending: false });
+  let query = supabase.from("trips").select(`${tripFields},destinations(name_en,name_ar,slug)`).in("status", ["gathering", "under_review", "confirmed", "fully_booked"]).order("created_at", { ascending: false });
   if (destinationId) query = query.eq("destination_id", destinationId);
   if (limit) query = query.limit(limit);
   const [{ data, error },{data:demand}] = await Promise.all([query,supabase.from("trip_demand").select("trip_id,paid_travelers,demand_status")]);

@@ -1,6 +1,21 @@
 "use client";
+
 import Link from "next/link";
-import {useState} from "react";
-import {useSite} from "./site-context";
-import {imageUrl} from "../data/content";
-export default function ProductDetailClient({product}){const {lang,addToCart,demo}=useSite();const [added,setAdded]=useState(false);const raw=product.images?.[0]||"photo-1470770841072-f978cf4d019e";const image=imageUrl(raw,1600,demo.media);return <main className="detail-page shop-detail"><Link href="/shop" className="back-link">← Field shop</Link><div className="product-detail-grid"><img src={image} alt={product.name_en}/><div><p className="eyebrow">{product.category?.name_en||"FIELD SHOP"} <i/></p><h1>{lang==="ar"?product.name_ar:product.name_en}</h1><p>{lang==="ar"?product.description_ar:product.description_en}</p><strong className="product-detail-price">{product.currency||"EGP"} {Number(product.price).toLocaleString("en-EG")}</strong>{product.preview&&<p className="preview-disclaimer">Illustrative preview · not a live offer</p>}<button className="button button-dark" onClick={()=>{addToCart({...product,image,image_source:raw});setAdded(true);}}>{added?"Added to bag":"Add to bag"} ↗</button>{added&&<p role="status"><Link href="/cart">View bag ↗</Link></p>}</div></div></main>}
+import { useState } from "react";
+import { useSite } from "./site-context";
+import { imageUrl } from "../data/content";
+
+export default function ProductDetailClient({ product }) {
+  const { lang, addToCart, demo } = useSite();
+  const ar = lang === "ar";
+  const [added, setAdded] = useState(false);
+  const source = product.images?.[0] || "photo-1470770841072-f978cf4d019e";
+  const image = imageUrl(source, 1600, demo.media);
+  const name = ar ? (product.name_ar || product.name_en) : product.name_en;
+  const description = ar ? (product.description_ar || product.description_en) : product.description_en;
+  const category = ar ? (product.category?.name_ar || product.category?.name_en || "متجر الرحلات") : (product.category?.name_en || "FIELD SHOP");
+  return <main className="detail-page shop-detail" dir={ar ? "rtl" : "ltr"}>
+    <Link href="/shop" className="back-link">← {ar ? "متجر الرحلات" : "Field shop"}</Link>
+    <div className="product-detail-grid"><img src={image} alt={name} /><div><p className="eyebrow">{category} <i /></p><h1>{name}</h1><p>{description}</p><strong className="product-detail-price">{ar ? "ج.م" : (product.currency || "EGP")} {Number(product.price).toLocaleString(ar ? "ar-EG" : "en-EG")}</strong>{product.preview && <p className="preview-disclaimer">{ar ? "معاينة توضيحية · ليست عرضًا مباشرًا" : "Illustrative preview · not a live offer"}</p>}<button className="button button-dark" onClick={() => { addToCart({ ...product, image, image_source: source }); setAdded(true); }}>{added ? (ar ? "أُضيف إلى الحقيبة" : "Added to bag") : (ar ? "أضف إلى الحقيبة" : "Add to bag")} ↗</button>{added && <p role="status"><Link href="/cart">{ar ? "اعرض الحقيبة ↗" : "View bag ↗"}</Link></p>}</div></div>
+  </main>;
+}

@@ -2,6 +2,7 @@ import "./globals.css";
 import { SiteProvider } from "../src/components/site-context";
 import { Header } from "../src/components/header";
 import { Footer } from "../src/components/footer";
+import WorkspaceTopbar from "../src/components/workspace-topbar";
 
 export const metadata = {
   title: "Egyptian Discovery — Find your wild",
@@ -14,9 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr" data-theme="light" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
         <SiteProvider>
-          <Header />
-          {children}
-          <Footer />
+          <div className="app-frame"><Header /><div className="app-content"><WorkspaceTopbar />{children}<Footer /></div></div>
         </SiteProvider>
       </body>
     </html>
