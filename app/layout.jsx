@@ -3,6 +3,7 @@ import { SiteProvider } from "../src/components/site-context";
 import { Header } from "../src/components/header";
 import { Footer } from "../src/components/footer";
 import WorkspaceTopbar from "../src/components/workspace-topbar";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: "Egyptian Discovery — Find your wild",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <SiteProvider>
           <div className="app-frame"><Header /><div className="app-content"><WorkspaceTopbar />{children}<Footer /></div></div>
         </SiteProvider>
+        <Analytics />
       </body>
     </html>
   );
