@@ -1,0 +1,10 @@
+node_modules/
+.pnpm-node_modules-backup/
+.pnpm-store/
+.next/
+out/
+.DS_Store
+*.log
+.env*
+!.env.example
+*.tgz

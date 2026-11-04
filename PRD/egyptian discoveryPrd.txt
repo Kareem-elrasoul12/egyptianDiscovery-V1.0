@@ -1,0 +1,1630 @@
+# EGYPTIAN DISCOVERY
+## Master Product Requirements Document (PRD)
+**Project:** Egyptian Discovery  
+**Document type:** Complete Product & Development Specification  
+**Platform:** Bilingual Travel Agency Website + E-commerce Store  
+**Target market:** Egypt  
+**Primary objective:** Build a premium, modern, adventure-focused digital platform for discovering and booking trips across Egypt, alongside an integrated shop for camping equipment and travel gadgets.
+
+---
+
+# 1. PROJECT VISION
+
+## 1.1 Concept
+
+Egyptian Discovery is an Egypt-focused travel platform that combines a professional travel agency website with an integrated e-commerce store.
+
+The platform allows customers to:
+- Discover destinations and trips throughout Egypt.
+- Explore detailed itineraries, activities, and travel information.
+- Register interest in trips and reserve seats.
+- Pay deposits and remaining balances.
+- Manage personal and group reservations.
+- Purchase camping equipment and travel gadgets.
+- Earn loyalty points and participate in a monthly member leaderboard.
+
+The platform uses a demand-based reservation model. Customers express interest in destinations and preferred dates, and the agency organizes and confirms trips based on actual paid demand and operational feasibility.
+
+**Important:** This is not a voting website. Customers do not organize trips themselves. The agency controls trip planning, dates, itineraries, pricing, suppliers, and final confirmation.
+
+## 1.2 Main business goals
+
+1. Create a recognizable and professional travel brand.
+2. Make discovering and reserving trips easy.
+3. Automate repetitive booking and administrative operations.
+4. Give customers a clear view of reservation and payment status.
+5. Increase customer retention through referrals, loyalty, and rewards.
+6. Generate additional revenue through the integrated shop.
+7. Give the administrator complete control through one dashboard.
+
+## 1.3 Target audience
+
+Customers located in Egypt who are interested in:
+- Adventure and outdoor activities.
+- Camping and nature.
+- Exploring Egyptian destinations.
+- Weekend and multi-day trips.
+- Group and family travel.
+- Travel equipment and gadgets.
+
+---
+
+# 2. BRAND IDENTITY AND VISUAL DIRECTION
+
+## 2.1 Brand personality
+
+Egyptian Discovery should feel:
+- Adventurous.
+- Modern.
+- Trustworthy.
+- Energetic.
+- Premium but accessible.
+- Connected to Egypt's nature, culture, and destinations.
+
+Avoid making the website look like a generic travel agency template.
+
+## 2.2 Visual direction
+
+Create a distinctive visual identity using:
+- Strong photography of Egyptian destinations.
+- Large destination images.
+- Clean typography.
+- Modern layouts.
+- Elegant cards and information sections.
+- Subtle animations and transitions.
+- Clear visual hierarchy.
+- Carefully designed icons and illustrations.
+
+Use the official Egyptian Discovery logo as the reference for the brand's colors and identity. Do not invent a conflicting visual identity.
+
+## 2.3 Design quality
+
+The website should look like a professionally designed commercial product, not a basic student project.
+
+Prioritize:
+- Excellent spacing and alignment.
+- Consistent design components.
+- High-quality image selection.
+- Attractive destination and trip cards.
+- Clear booking progress indicators.
+- Smooth page transitions.
+- Responsive interactions.
+- Consistent styling across all pages.
+
+Avoid:
+- Excessive gradients.
+- Too many colors.
+- Unnecessary animations.
+- Overcrowded pages.
+- Generic stock-template layouts.
+- Decorative elements that reduce usability.
+
+---
+
+# 3. PLATFORM STRUCTURE
+
+The platform consists of three main areas:
+
+### A. Public website
+For discovering destinations, browsing trips, learning about the agency, and accessing the shop.
+
+### B. Customer account
+For managing reservations, payments, traveler information, orders, rewards, and personal preferences.
+
+### C. Admin dashboard
+For managing the entire business, including trips, customers, payments, inventory, orders, rewards, and website content.
+
+All three areas must use the same underlying customer and business data.
+
+---
+
+# 4. WEBSITE DESIGN AND NAVIGATION
+
+## 4.1 Main navigation
+
+The main navigation should include:
+
+- Home.
+- Destinations.
+- Trips.
+- Shop.
+- About Us.
+- Contact.
+- Account / Login.
+
+Include:
+- Language switcher: Arabic / English.
+- Light / dark theme switcher.
+- Cart icon with item count.
+- Clear primary booking or exploration action.
+
+Navigation must adapt properly to mobile screens.
+
+## 4.2 Homepage
+
+The homepage should immediately communicate what Egyptian Discovery offers.
+
+Recommended structure:
+
+1. **Hero section**
+   - Large, high-quality Egyptian travel photography or video.
+   - Strong headline.
+   - Short description.
+   - Primary action: Explore Destinations.
+   - Secondary action: Discover Trips.
+
+2. **Featured destinations**
+   - Attractive destination cards.
+   - Destination images.
+   - Short descriptions.
+   - Links to destination details.
+
+3. **Upcoming and popular trips**
+   - Trip cards showing dates, prices, availability, and booking status.
+
+4. **Interactive destination map**
+   - Map of Egypt.
+   - Interactive destination markers.
+   - Selecting a marker opens destination information.
+
+5. **Why Egyptian Discovery**
+   - Key advantages and trust indicators.
+
+6. **Previous adventures**
+   - Photo and video gallery from previous trips.
+
+7. **Shop highlights**
+   - Featured camping products and travel gadgets.
+
+8. **Customer reviews**
+   - Verified customer reviews and ratings.
+
+9. **Community leaderboard preview**
+   - Highlight top monthly members.
+
+10. **Final call to action**
+    - Encourage visitors to discover their next trip.
+
+11. **Footer**
+    - Navigation links.
+    - Contact information.
+    - WhatsApp.
+    - Social media.
+    - Policies and legal information.
+
+The homepage should be visually engaging without becoming excessively long or crowded.
+
+## 4.3 Destinations page
+
+Display all destinations managed by the administrator.
+
+Each destination should support:
+- Name in Arabic and English.
+- Main image and image gallery.
+- Description.
+- Location on the map.
+- Highlights and attractions.
+- Available trips.
+- Related activities.
+- Travel information.
+
+Provide search and filtering where useful.
+
+## 4.4 Destination details page
+
+Each destination needs a dedicated page with:
+- Large visual header.
+- Destination introduction.
+- Image gallery.
+- Location and map.
+- Attractions and activities.
+- Available trips.
+- Related travel guides or information.
+- Clear booking actions.
+
+If no trips are currently available, display an appropriate message rather than an empty page.
+
+## 4.5 Trips page
+
+Display all available trips with filters such as:
+- Destination.
+- Trip type.
+- Duration.
+- Price.
+- Date.
+- Availability.
+- Trip status.
+
+Trip types include:
+- Day trips.
+- Weekend trips.
+- Multi-day trips.
+
+## 4.6 Trip details page
+
+Each trip must have a detailed page containing:
+
+**Basic information**
+- Trip name.
+- Destination.
+- Main images.
+- Price.
+- Duration.
+- Available dates.
+- Booking deadline.
+- Maximum capacity.
+
+**Trip details**
+- Full itinerary.
+- Activities.
+- Accommodation information.
+- Transportation information.
+- Included services.
+- Excluded services.
+- Important requirements.
+- What customers should bring.
+
+**Booking information**
+- Minimum required paid travelers.
+- Current paid traveler count.
+- Progress bar.
+- General status.
+- Deposit amount.
+- Booking instructions.
+- Cancellation policy.
+
+**Social information**
+- Customer reviews where available.
+- WhatsApp sharing.
+
+**Interactive elements**
+- Countdown to departure when applicable.
+- Clear reservation button.
+- Date preference selector.
+- Number of travelers selector.
+
+Never display misleading availability or booking information. All booking indicators must reflect actual system data.
+
+---
+
+# 5. TRAVEL BOOKING ENGINE
+
+This is one of the most important parts of the entire platform.
+
+The booking engine must follow the business rules below precisely.
+
+## 5.1 Agency-controlled trip creation
+
+The administrator creates every trip.
+
+A trip can include:
+- Destination.
+- Itinerary.
+- Activities.
+- Transportation partner.
+- Accommodation partner.
+- Preferred travel dates.
+- Maximum capacity.
+- Minimum paid travelers.
+- Price per traveler.
+- Deposit percentage.
+- Booking deadline.
+- Departure date.
+- Cancellation and refund policy.
+- Images and descriptions.
+
+Transportation and accommodation are supplied by external partner companies.
+
+**Partners do not receive accounts or access to the platform.** All partner communication and management happen through the administrator.
+
+## 5.2 Initial reservation process
+
+The customer:
+
+1. Opens a destination or trip.
+2. Selects one or more preferred dates.
+3. Selects the number of travelers.
+4. Submits the reservation.
+5. Receives a temporary reservation hold.
+6. Uploads payment proof for the required deposit.
+7. Waits for administrator verification.
+
+The system must create a separate reservation record and identify the customer, trip, preferred dates, traveler count, and payment status.
+
+### Temporary reservation hold
+
+- Unpaid reservation hold: 12 hours.
+- The system automatically expires unpaid holds after 12 hours.
+- Expired seats return to available capacity.
+- Customers may cancel an initial reservation before paying the deposit.
+- Preferred dates cannot be edited after initial registration.
+- Multiple destinations may be reserved simultaneously.
+
+### Partial payments
+
+If a customer initially reserves four seats but pays deposits for only two:
+
+- Keep two paid seats.
+- Release the other two seats.
+- Update the reservation accordingly.
+- Only verified paid seats count toward the minimum traveler requirement.
+
+The system must not count unpaid seats as confirmed demand.
+
+## 5.3 Reservation status system
+
+Implement clear reservation statuses, including:
+
+- Pending Payment.
+- Payment Under Review.
+- Deposit Paid.
+- Hold Expired.
+- Cancelled.
+- Under Review.
+- Trip Confirmed.
+- Balance Payment Pending.
+- Fully Paid.
+- Completed.
+- Refunded.
+
+Statuses must update according to actual business events.
+
+The customer dashboard and admin dashboard must display consistent statuses.
+
+## 5.4 Demand indicators
+
+Each trip must show:
+
+- Exact paid traveler count.
+- Minimum required travelers.
+- Progress bar, such as 8/13.
+- General status, such as:
+  - Gathering Travelers.
+  - Almost Confirmed.
+  - Under Review.
+  - Confirmed.
+  - Fully Booked.
+
+These indicators must be based on successfully verified deposits.
+
+## 5.5 Minimum traveler requirement
+
+Default minimum: **13 paid travelers**.
+
+The administrator can change this value for each trip.
+
+Default deadline to reach the minimum: **one month**.
+
+The administrator can configure the deadline for each trip.
+
+When the minimum is reached, the trip enters the Under Review status.
+
+Reaching the minimum must NOT automatically confirm the trip.
+
+## 5.6 Manual trip confirmation
+
+The administrator must manually review the trip before confirming it.
+
+The administrator checks:
+- Transportation availability.
+- Accommodation availability.
+- Supplier availability.
+- Operational feasibility.
+- Costs.
+- Preferred dates selected by customers.
+
+The administrator selects the final trip date and confirms the trip.
+
+### Date compatibility
+
+The system should help the administrator understand which dates are most compatible with paid customer demand.
+
+The final date must respect customers' submitted preferences.
+
+If the administrator selects a date that a customer did not choose:
+- Do not automatically move that customer.
+- Offer the customer an alternative or refund.
+- Record the customer's decision.
+
+## 5.7 If the trip does not reach its minimum
+
+If the trip fails to reach the required minimum before the deadline:
+
+1. The administrator reviews the situation.
+2. The trip date may be changed.
+3. Existing customers receive the choice to:
+   - Accept the new date and keep their reservation.
+   - Request a refund.
+4. The customer's decision must be stored.
+5. Customers who choose a refund are handled through the manual refund process.
+
+The system must not silently change existing reservations.
+
+---
+
+# 6. TRIP CONFIRMATION AND PRIORITY BOOKING
+
+## 6.1 Priority period
+
+When the administrator confirms a trip:
+
+- A 24-hour priority booking period begins.
+- Eligible customers receive priority access.
+- The system records the beginning and end of the priority period.
+
+### Eligibility
+
+A customer qualifies if:
+- They initially registered for the trip.
+- Their reservation is still active.
+- Their deposit has been successfully verified.
+
+Customers whose unpaid reservation holds expired are not eligible.
+
+### Additional seat
+
+Each eligible customer may reserve a maximum of one additional seat for a friend or family member.
+
+This additional seat must follow the applicable payment and capacity rules.
+
+Priority access is not a discount.
+
+## 6.2 Public booking
+
+After the 24-hour priority period:
+- Remaining seats become available to everyone.
+- Public reservations continue until the trip reaches capacity or its booking deadline.
+- The system must prevent overselling.
+
+## 6.3 Waiting list
+
+When a trip is full:
+- Customers may join a waiting list.
+- The waiting list is managed manually by the administrator.
+- The administrator can view and manage waiting customers.
+- The system must not automatically confirm waiting-list customers.
+
+---
+
+# 7. PAYMENT SYSTEM
+
+## 7.1 Payment methods
+
+Only the following payment methods are supported at launch:
+
+- InstaPay.
+- Bank transfer.
+
+Do not integrate credit card or other online payment gateways unless requested later.
+
+## 7.2 Deposit
+
+Default deposit: **10% of the total trip price**.
+
+The administrator can configure the deposit percentage for each trip.
+
+Customers must upload a screenshot of their payment as proof.
+
+The administrator manually:
+- Reviews the uploaded screenshot.
+- Checks the payment.
+- Approves or rejects the proof.
+- Records the verification result.
+
+Only approved payments count as paid.
+
+## 7.3 Payment records
+
+Every payment must have its own record containing:
+- Customer.
+- Reservation.
+- Amount.
+- Payment method.
+- Uploaded proof.
+- Submission date.
+- Verification status.
+- Administrator who reviewed it.
+- Verification date.
+- Notes if necessary.
+
+Payment screenshots must be stored securely.
+
+## 7.4 Payment receipts
+
+Generate an automatic receipt after each approved payment.
+
+Receipts should include:
+- Egyptian Discovery branding.
+- Customer information.
+- Payment amount.
+- Payment date.
+- Related trip or order.
+- Payment reference or receipt number.
+- Payment status.
+
+Customers must be able to access receipts through their dashboard.
+
+## 7.5 Remaining balance
+
+After trip confirmation:
+- The remaining balance becomes due.
+- Customers have 48 hours to complete payment.
+- Customers upload payment screenshots.
+- The administrator manually verifies the payment.
+
+If the customer fails to pay within 48 hours:
+- Their seat becomes available for booking again.
+- The administrator decides case by case what happens to the original deposit.
+- The decision must be recorded.
+
+## 7.6 Refunds
+
+Customers cannot directly request refunds through the website.
+
+They contact the agency through WhatsApp.
+
+The administrator:
+- Reviews the request.
+- Approves or rejects the refund.
+- Records the amount and reason.
+- Updates the reservation and payment records.
+
+If the agency cancels a confirmed trip, customers receive a refund.
+
+Customer cancellation and refund rules must be configurable through the admin dashboard.
+
+---
+
+# 8. CUSTOMER ACCOUNTS AND REGISTRATION
+
+## 8.1 Registration
+
+Keep customer registration extremely simple.
+
+The only required registration information is:
+
+**Phone number.**
+
+Important:
+- Email is NOT required.
+- National ID is NOT required during registration.
+- Do not make email a mandatory field anywhere in the customer registration process.
+
+Phone number is the primary customer identifier and contact method.
+
+Implement a secure phone-based authentication process.
+
+## 8.2 Customer profile
+
+Customers should be able to:
+- View their phone number.
+- Update supported account information.
+- View reservations.
+- View payment history.
+- Manage saved destinations.
+- View loyalty points.
+- View referral rewards.
+- View leaderboard position.
+- View shop orders.
+
+Do not collect unnecessary personal information.
+
+## 8.3 National ID collection
+
+National ID details are collected only after:
+
+1. The trip has been confirmed.
+2. The customer has completed the required payment.
+
+They must not be requested during:
+- Website registration.
+- General browsing.
+- Initial unpaid reservations.
+
+After the required conditions are met, collect the necessary traveler information for the confirmed trip.
+
+Every traveler must provide:
+- National ID details.
+- A photo of their national ID.
+
+Also support:
+- Emergency contact information.
+- Additional traveler information needed for the trip.
+
+Each traveler's information must be linked to the appropriate confirmed reservation.
+
+## 8.4 Customer dashboard
+
+Create a clean and intuitive customer dashboard.
+
+Include the following sections:
+
+**Overview**
+- Upcoming trips.
+- Active reservations.
+- Pending payments.
+- Recent orders.
+- Loyalty points.
+
+**My Trips**
+- Current reservations.
+- Trip details.
+- Preferred dates.
+- Booking status.
+- Payment progress.
+- Departure countdown.
+
+**Payments**
+- Payment history.
+- Uploaded proofs.
+- Payment verification status.
+- Receipts.
+
+**Travelers**
+- Saved traveler information.
+- National ID submission for eligible confirmed trips.
+- Emergency contacts.
+
+**Shop Orders**
+- Order history.
+- Payment status.
+- Delivery status.
+
+**Rewards**
+- Referral rewards.
+- Loyalty points.
+- Monthly leaderboard position.
+
+**Saved Destinations**
+- Favorite destinations.
+
+---
+
+# 9. NOTIFICATIONS AND COMMUNICATION
+
+WhatsApp is the only customer notification and direct communication channel.
+
+Provide:
+- WhatsApp contact button.
+- Trip sharing through WhatsApp.
+- Booking-related notifications through WhatsApp.
+- Payment status notifications.
+- Trip confirmation notifications.
+- Payment deadline reminders.
+- Departure reminders.
+- Order status notifications where supported.
+
+No built-in chat system is required.
+
+The implementation should use a suitable WhatsApp integration or click-to-chat workflow, depending on the selected technical approach and available services.
+
+---
+
+# 10. DISCOUNTS, REFERRALS, AND LOYALTY
+
+All reward and discount settings must be manageable through the admin dashboard.
+
+## 10.1 Referral program
+
+Both people benefit from a successful referral:
+
+- Referring customer receives a discount.
+- Referred customer receives a discount.
+
+The system must track referral relationships and prevent duplicate or fraudulent rewards.
+
+The administrator can configure:
+- Referral discount values.
+- Eligibility conditions.
+- Reward limits.
+- Promotional validity.
+
+## 10.2 Loyalty points
+
+Customers earn loyalty points after completing trips.
+
+Points are based on the trip price.
+
+The administrator can configure the points calculation formula through the dashboard.
+
+Points should only be awarded after the trip is marked Completed.
+
+## 10.3 Discounts
+
+Support:
+
+**Early-bird discounts**
+- Automatically applied according to administrator-configured rules.
+
+**Group discounts**
+- Configured manually by the administrator.
+
+**Promo codes**
+- Percentage discounts.
+- Fixed-value discounts.
+- Configurable validity dates.
+- Configurable usage limits.
+- Applicable products or trips where supported.
+
+The system must validate discount eligibility before applying discounts.
+
+---
+
+# 11. MONTHLY MEMBER LEADERBOARD
+
+Create a monthly leaderboard that recognizes the platform's most active customers.
+
+## 11.1 Scoring
+
+- One point per qualifying activity.
+- Leaderboard resets monthly.
+- Qualifying activities include:
+  - Bookings.
+  - Completed trips.
+  - Reviews.
+  - Referrals.
+  - Other administrator-approved activities.
+
+The administrator must be able to configure qualifying activities through the dashboard.
+
+## 11.2 Rewards
+
+Top members can receive:
+- Discounts on trips.
+- Discounts on shop products.
+
+Reward values and conditions must be configurable.
+
+## 11.3 Anti-abuse rules
+
+Do not reward:
+- Duplicate reviews.
+- Fake referrals.
+- Repeated or fraudulent actions.
+- Cancelled activities where a qualifying action should no longer count.
+
+Only valid activities should generate points.
+
+---
+
+# 12. INTEGRATED E-COMMERCE SHOP
+
+The platform includes a fully integrated online shop for camping equipment and travel gadgets.
+
+It must share customer accounts with the travel platform while keeping shop orders and travel reservations as separate business records.
+
+## 12.1 Product categories
+
+Suggested categories:
+
+- Camping Equipment.
+- Outdoor Accessories.
+- Portable Lighting.
+- Travel Gadgets.
+- Charging Accessories.
+- Hiking Accessories.
+- Storage and Organization.
+
+The administrator can create, edit, and remove categories.
+
+## 12.2 Product pages
+
+Each product should support:
+- Product name.
+- Description.
+- Multiple photos.
+- Price.
+- Category.
+- Stock quantity.
+- Variants such as color or size.
+- Availability status.
+- Related products.
+
+## 12.3 Shop experience
+
+Customers can:
+- Browse products.
+- Search products.
+- Filter by category.
+- View product details.
+- Select available variants.
+- Add products to cart.
+- Update cart quantities.
+- Checkout.
+- Upload payment proof.
+- View order history.
+- Track order status.
+
+## 12.4 Shop checkout
+
+Use the same supported payment methods:
+- InstaPay.
+- Bank transfer.
+
+Customer uploads payment screenshot.
+
+Administrator manually verifies the payment.
+
+Shop orders must not be mixed with travel reservations.
+
+## 12.5 Delivery and pickup
+
+Delivery is available throughout Egypt.
+
+Delivery fees vary by governorate.
+
+The administrator must be able to configure delivery fees separately for each governorate.
+
+Customers may also choose pickup during trips when the option is available.
+
+The system must calculate and display the correct delivery fee before checkout.
+
+## 12.6 Order management
+
+The administrator can:
+- View all orders.
+- Review payment proofs.
+- Approve or reject payments.
+- Update order status.
+- Manage delivery information.
+- Update tracking details where available.
+- Manage pickup orders.
+- View order history.
+
+Suggested order statuses:
+- Pending Payment.
+- Payment Under Review.
+- Paid.
+- Processing.
+- Ready for Pickup.
+- Shipped.
+- Delivered.
+- Cancelled.
+- Refunded.
+
+## 12.7 Returns and exchanges
+
+The business policy is:
+
+**No returns or exchanges except for defective products.**
+
+The administrator handles defective-product cases.
+
+The dashboard must allow the administrator to record:
+- Defective product claims.
+- Customer information.
+- Order details.
+- Evidence or photos.
+- Decision.
+- Resolution.
+
+---
+
+# 13. ADDITIONAL FEATURES
+
+Include the following features:
+
+## 13.1 Previous trips gallery
+- Photo and video galleries.
+- Organized by trip or destination.
+- Managed by the administrator.
+
+## 13.2 Reviews and ratings
+- Customers can review eligible completed trips.
+- Display ratings and review content.
+- Administrator can moderate reviews.
+- Prevent duplicate reviews for the same trip where appropriate.
+
+## 13.3 WhatsApp trip sharing
+- Share trip links and basic trip information through WhatsApp.
+
+## 13.4 Departure countdown
+- Display a countdown for confirmed upcoming trips.
+
+## 13.5 Personalized destination recommendations
+- Recommend destinations based on available platform information and customer activity.
+- Recommendations should not replace manual trip availability or booking rules.
+
+## 13.6 Travel blog
+A travel blog is **not required at launch**.
+
+Do not spend development time building a blog or article management system in the initial version.
+
+---
+
+# 14. ADMIN DASHBOARD
+
+The admin dashboard is the control center of Egyptian Discovery.
+
+There is one main administrator account at launch.
+
+No employee or partner accounts are required.
+
+The administrator must be able to manage the complete business without editing code or directly modifying the database.
+
+## 14.1 Dashboard overview
+
+Display key business metrics:
+
+- Total revenue.
+- Travel revenue.
+- Shop revenue.
+- Total reservations.
+- Confirmed trips.
+- Upcoming trips.
+- Active customers.
+- Pending payments.
+- Pending refunds.
+- Shop orders.
+- Inventory alerts.
+- Popular destinations.
+- Expenses and profit.
+
+Use useful charts, summary cards, and date filters.
+
+## 14.2 Trip management
+
+The administrator can:
+- Create trips.
+- Edit trips.
+- Delete or archive trips where appropriate.
+- Manage destinations.
+- Manage itineraries.
+- Manage dates.
+- Set minimum travelers.
+- Set maximum capacity.
+- Set prices.
+- Configure deposit percentage.
+- Configure booking deadlines.
+- Confirm trips manually.
+- Cancel trips.
+- Manage partner information.
+- Upload images and galleries.
+
+## 14.3 Reservation management
+
+The administrator can:
+- View all reservations.
+- Search and filter customers.
+- View traveler counts.
+- View preferred dates.
+- View paid and unpaid seats.
+- View payment statuses.
+- Approve or reject payment proofs.
+- Manage priority periods.
+- Manage waiting lists.
+- Handle date-change decisions.
+- Review reservation history.
+
+## 14.4 Payment management
+
+The administrator can:
+- View all payments.
+- View uploaded payment screenshots.
+- Approve or reject payments.
+- Record verification notes.
+- Issue receipts.
+- Manage remaining balances.
+- Approve or reject refunds.
+- Make case-by-case deposit decisions.
+
+## 14.5 Customer management
+
+The administrator can:
+- Search customers by phone number.
+- View customer profiles.
+- View booking history.
+- View payment history.
+- View shop orders.
+- View reward history.
+- Access national ID information and photos under the restricted-access policy.
+
+## 14.6 Shop management
+
+The administrator can:
+- Manage products.
+- Manage categories.
+- Manage product variants.
+- Manage prices.
+- Manage stock.
+- Manage orders.
+- Manage payment proofs.
+- Manage delivery fees by governorate.
+- Manage pickup options.
+- Handle defective-product claims.
+
+## 14.7 Loyalty and rewards management
+
+The administrator can configure all relevant rules, including:
+- Loyalty points formula.
+- Referral discounts.
+- Referral eligibility.
+- Leaderboard qualifying activities.
+- Activity scoring.
+- Reward values.
+- Promo codes.
+
+## 14.8 Website content management
+
+The administrator can manage:
+- Homepage content.
+- Destination descriptions.
+- Destination photos.
+- Trip descriptions.
+- Trip galleries.
+- Previous trip galleries.
+- Reviews.
+- Featured products.
+- Website contact details.
+- General website settings.
+
+## 14.9 Analytics and exports
+
+Provide analytics for:
+- Revenue.
+- Expenses.
+- Profit.
+- Travel bookings.
+- Popular destinations.
+- Customer activity.
+- Payment performance.
+- Refunds.
+- Shop sales.
+- Product performance.
+- Inventory.
+
+Allow reports to be exported to Excel.
+
+---
+
+# 15. DASHBOARD CONFIGURATION REQUIREMENTS
+
+All business rules and adjustable values must be configurable from the admin dashboard.
+
+The administrator should not need a developer to change normal business settings.
+
+This includes:
+
+| Setting | Required configuration |
+|---|---|
+| Minimum travelers | Per trip |
+| Maximum trip capacity | Per trip |
+| Booking deadline | Per trip |
+| Minimum target deadline | Per trip |
+| Deposit percentage | Per trip |
+| Remaining balance deadline | Default 48 hours |
+| Priority period | Default 24 hours |
+| Additional priority seats | Default one |
+| Reservation hold | Default 12 hours |
+| Cancellation rules | Configurable |
+| Refund rules | Configurable |
+| Deposit forfeiture decisions | Case-by-case admin decision |
+| Referral discounts | Configurable |
+| Referral conditions | Configurable |
+| Loyalty points formula | Configurable |
+| Leaderboard activities | Configurable |
+| Leaderboard scoring | One point per qualifying activity by default |
+| Leaderboard rewards | Configurable |
+| Promo codes | Configurable |
+| Governorate delivery fees | Configurable per governorate |
+| Defective-product claim policy | Configurable |
+| National ID retention policy | Configurable |
+
+**Important:** Defaults are initial business settings, not hardcoded limitations. The administrator must be able to change supported values through the dashboard.
+
+---
+
+# 16. SECURITY AND PRIVACY
+
+Security is a critical requirement, particularly because the platform handles payment screenshots and national ID documents.
+
+## 16.1 Authentication
+
+- Secure phone-number-based customer authentication.
+- No mandatory customer email.
+- Secure administrator login.
+- Strong administrator access protection.
+- Proper session management.
+
+## 16.2 National ID protection
+
+National ID information is collected only after trip confirmation and the required payment.
+
+Requirements:
+- National ID photos must be stored privately.
+- Only the main administrator can access national ID photos.
+- Customers can submit their own required documents securely.
+- Other customers must never access another customer's documents.
+- Use secure access controls and protected file URLs.
+- Log administrator access where technically appropriate.
+
+## 16.3 Payment security
+
+- Store payment proofs securely.
+- Only authorized administrator actions can approve payments.
+- Maintain a history of payment decisions.
+- Prevent duplicate payment processing.
+- Never trust payment status supplied by the client browser.
+
+## 16.4 General security
+
+- Validate all user input on the server.
+- Protect customer and admin routes.
+- Apply authorization checks to every sensitive operation.
+- Use encryption in transit and at rest.
+- Maintain database backups.
+- Keep audit logs for important administrator actions.
+- Implement appropriate data retention and deletion processes.
+- Follow applicable Egyptian privacy and data protection requirements.
+
+---
+
+# 17. DATA MODEL AND SYSTEM ARCHITECTURE
+
+The implementation must use a structured relational database.
+
+The exact technology stack can be finalized during development, but the database must support the following entities and relationships.
+
+## 17.1 Core data entities
+
+**Customers**
+- Unique customer ID.
+- Phone number.
+- Account creation date.
+- Account status.
+
+Phone number is the primary customer contact and login identifier. Email is not required.
+
+**Destinations**
+- Name in Arabic and English.
+- Descriptions.
+- Location.
+- Images.
+- Activities.
+- Status.
+
+**Trips**
+- Destination.
+- Itinerary.
+- Dates.
+- Capacity.
+- Minimum travelers.
+- Price.
+- Deposit percentage.
+- Booking deadline.
+- Trip status.
+- Cancellation policy.
+- Partner information.
+
+**Reservations**
+- Customer.
+- Trip.
+- Preferred dates.
+- Requested traveler count.
+- Paid traveler count.
+- Reservation status.
+- Creation date.
+- Hold expiration.
+
+**Travelers**
+- Customer relationship.
+- Reservation relationship.
+- Name and required traveler information.
+- National ID information.
+- National ID photo.
+- Emergency contact information.
+
+National ID fields should only become required when the applicable confirmed-trip payment conditions have been met.
+
+**Payments**
+- Reservation or shop order relationship.
+- Amount.
+- Payment method.
+- Screenshot.
+- Verification status.
+- Verification administrator.
+- Dates and notes.
+
+**Refunds**
+- Related payment.
+- Related reservation.
+- Amount.
+- Reason.
+- Decision.
+- Status.
+- Processing date.
+
+**Products**
+- Name.
+- Description.
+- Category.
+- Price.
+- Photos.
+- Inventory.
+- Variants.
+- Availability.
+
+**Orders**
+- Customer.
+- Products.
+- Quantities.
+- Payment.
+- Delivery address.
+- Governorate.
+- Delivery fee.
+- Pickup or delivery selection.
+- Order status.
+
+**Rewards**
+- Customer.
+- Reward type.
+- Points or discount value.
+- Source activity.
+- Date.
+- Status.
+
+**Reviews**
+- Customer.
+- Trip.
+- Rating.
+- Review text.
+- Moderation status.
+
+**Referral records**
+- Referring customer.
+- Referred customer.
+- Referral status.
+- Rewards granted.
+
+**Leaderboard activity**
+- Customer.
+- Qualifying activity.
+- Points.
+- Date.
+- Validity status.
+
+**Admin audit logs**
+- Administrator.
+- Action.
+- Affected record.
+- Timestamp.
+- Relevant change details.
+
+## 17.2 Data integrity
+
+The database must enforce important business rules.
+
+Examples:
+- A reservation cannot exceed available capacity.
+- Expired holds cannot count as paid travelers.
+- Unverified payments cannot count toward trip minimums.
+- A customer cannot receive duplicate rewards for the same qualifying action.
+- A shop order cannot be confused with a travel reservation.
+- A seat cannot be sold twice.
+- Payment records must remain traceable.
+
+Use database transactions and appropriate locking where needed to prevent race conditions and overselling.
+
+---
+
+# 18. TECHNICAL IMPLEMENTATION DIRECTION
+
+The following is a proposed development stack, not a final mandatory hosting decision.
+
+| Layer | Suggested technology |
+|---|---|
+| Frontend | Next.js |
+| Styling | Tailwind CSS |
+| Database | PostgreSQL |
+| Authentication | Phone-based authentication |
+| Backend | Next.js server functions / API |
+| File storage | Private object storage |
+| Hosting | To be selected after development |
+
+Supabase is a potential option for PostgreSQL, authentication, and file storage.
+
+The development agent may recommend alternatives if they provide a better overall result.
+
+## 18.1 Technical requirements
+
+- Responsive frontend.
+- Reusable components.
+- Clean project structure.
+- Secure server-side business logic.
+- Database migrations.
+- Environment variable management.
+- Input validation.
+- Error handling.
+- Loading states.
+- Empty states.
+- Authentication protection.
+- Database backups.
+- File upload validation.
+- Proper image optimization.
+- Search engine optimization.
+- Good performance.
+
+## 18.2 Hosting and deployment decision
+
+**Hosting is not finalized during the initial development phase.**
+
+Complete the website development and testing first.
+
+After the website is ready, evaluate and select the hosting arrangement.
+
+The final hosting process should include:
+1. Comparing hosting providers and costs.
+2. Selecting application hosting.
+3. Selecting database and storage hosting.
+4. Connecting the domain.
+5. Configuring production environment variables.
+6. Configuring backups and security.
+7. Deploying the production version.
+8. Testing all major functions in production.
+9. Launching the website.
+
+Do not treat Vercel or any other provider as a confirmed requirement.
+
+---
+
+# 19. LANGUAGE, ACCESSIBILITY, AND RESPONSIVENESS
+
+## 19.1 Arabic and English
+
+The entire customer-facing website must support Arabic and English.
+
+Arabic:
+- Right-to-left layout.
+- Correct text alignment.
+- Proper Arabic typography.
+- Correct navigation direction.
+
+English:
+- Left-to-right layout.
+- Correct text alignment.
+- Consistent spacing and navigation.
+
+Language switching should preserve the current page whenever possible.
+
+All important content, including trips, destinations, products, and interface labels, should support both languages.
+
+## 19.2 Responsive design
+
+Design mobile-first, then adapt for:
+- Mobile phones.
+- Tablets.
+- Laptops.
+- Desktop screens.
+
+The mobile version must provide the same essential functionality as desktop.
+
+## 19.3 Accessibility
+
+- Clear contrast.
+- Readable typography.
+- Keyboard-accessible controls.
+- Visible focus states.
+- Meaningful labels.
+- Appropriate alternative text for important images.
+- Clear error messages.
+
+---
+
+# 20. FUNCTIONAL TESTING AND ACCEPTANCE CRITERIA
+
+The website is not complete simply because its pages look finished.
+
+The actual business workflows must work correctly.
+
+Test at least the following scenarios:
+
+### Booking tests
+
+1. Customer registers using only a phone number.
+2. Customer reserves a trip with multiple preferred dates.
+3. Customer reserves multiple destinations.
+4. An unpaid reservation expires after 12 hours.
+5. A customer pays for only part of a reservation.
+6. Only paid seats remain reserved.
+7. Only verified deposits count toward the trip minimum.
+8. The administrator manually confirms a trip.
+9. Priority access starts and ends at the correct times.
+10. Eligible customers can reserve one extra seat.
+11. Public booking opens after priority ends.
+12. Full trips support waiting lists.
+13. Customers can choose between a changed date and a refund.
+
+### Payment tests
+
+1. Customer uploads a payment screenshot.
+2. Administrator approves the payment.
+3. Administrator rejects the payment.
+4. Receipts are generated after approved payments.
+5. The remaining balance deadline is 48 hours.
+6. Unpaid seats become available again.
+7. Deposit decisions are recorded.
+8. Refunds update the correct records.
+
+### Customer information tests
+
+1. Registration does not request email.
+2. Registration does not request national ID.
+3. National ID submission becomes available only after the required confirmed-trip payment conditions.
+4. Each traveler can submit the required information.
+5. National ID photos are inaccessible to other customers.
+6. Only the main administrator can access national ID photos.
+
+### Shop tests
+
+1. Customers can browse products.
+2. Customers can add products to cart.
+3. Product stock is updated correctly.
+4. Delivery fee matches the selected governorate.
+5. Customers can choose available pickup.
+6. Payment screenshots can be reviewed.
+7. Order statuses update correctly.
+8. Defective-product claims can be recorded.
+
+### Rewards tests
+
+1. Loyalty points are awarded after completed trips.
+2. Points use the configured trip-price formula.
+3. Referral rewards follow configured conditions.
+4. Leaderboard points are awarded once per qualifying activity.
+5. Monthly leaderboard resets correctly.
+6. Invalid or duplicate activities do not generate rewards.
+
+### Interface tests
+
+1. Arabic RTL works across all pages.
+2. English LTR works across all pages.
+3. Light and dark themes work.
+4. Mobile navigation works.
+5. Forms provide useful validation messages.
+6. Images and pages load efficiently.
+
+---
+
+# 21. DEVELOPMENT PHASES
+
+Build the platform in a structured order.
+
+## Phase 1 — Foundation and design
+
+- Establish project architecture.
+- Set up the design system.
+- Build navigation and layout.
+- Implement Arabic and English.
+- Implement light and dark themes.
+- Build the public homepage.
+- Build destination and trip pages.
+
+## Phase 2 — Authentication and customer accounts
+
+- Implement phone-based authentication.
+- Build customer profiles.
+- Build customer dashboard.
+- Implement reservation history.
+- Implement traveler information workflows.
+
+## Phase 3 — Booking engine
+
+- Build trip management.
+- Build initial reservations.
+- Implement 12-hour holds.
+- Implement partial seat payments.
+- Implement demand tracking.
+- Implement manual confirmation.
+- Implement priority booking.
+- Implement waiting lists.
+
+## Phase 4 — Payments
+
+- Implement payment screenshot uploads.
+- Build admin payment verification.
+- Generate receipts.
+- Implement remaining balance deadlines.
+- Implement refunds and deposit decisions.
+
+## Phase 5 — E-commerce shop
+
+- Build product catalog.
+- Build product pages.
+- Implement cart and checkout.
+- Implement payment verification.
+- Implement governorate delivery fees.
+- Implement order management.
+- Implement defective-product claims.
+
+## Phase 6 — Rewards and additional features
+
+- Implement referral system.
+- Implement loyalty points.
+- Implement monthly leaderboard.
+- Implement reviews and ratings.
+- Implement galleries.
+- Implement WhatsApp sharing.
+- Implement destination recommendations.
+
+## Phase 7 — Admin dashboard and reporting
+
+- Complete management modules.
+- Implement analytics.
+- Implement Excel exports.
+- Implement configurable business rules.
+- Implement audit logs.
+
+## Phase 8 — Testing and optimization
+
+- Test all business workflows.
+- Test payment and reservation edge cases.
+- Test Arabic and English.
+- Test mobile responsiveness.
+- Review security.
+- Optimize performance.
+- Fix errors and inconsistencies.
+
+## Phase 9 — Hosting and launch
+
+Only after development and testing:
+- Compare hosting providers.
+- Select the hosting architecture.
+- Configure the domain.
+- Deploy the application.
+- Configure production backups and monitoring.
+- Perform final production testing.
+- Launch.
+
+---
+
+# 22. FINAL DEVELOPMENT INSTRUCTIONS
+
+The development agent must follow these instructions throughout the project:
+
+1. **Understand the complete PRD before implementing features.** Do not start by building disconnected pages.
+
+2. **Prioritize functionality and design equally.** The website must look exceptional and operate reliably.
+
+3. **Build a real working platform.** Do not create buttons that are only decorative or forms that do not save data.
+
+4. **Use a proper database.** Do not rely on local storage or hardcoded sample data as the actual production system.
+
+5. **Keep business logic on the server.** Payment verification, reservation expiration, seat availability, rewards, and access control must not rely on client-side calculations alone.
+
+6. **Build a complete admin dashboard.** The administrator must be able to manage the business without changing code.
+
+7. **Respect every business rule.** Especially the reservation hold, partial payments, paid traveler count, manual trip confirmation, priority period, payment deadlines, and national ID collection conditions.
+
+8. **Do not collect unnecessary customer information.** Registration requires only a phone number. Email and national ID are not registration requirements.
+
+9. **Protect sensitive documents.** National ID photos are accessible only to the main administrator.
+
+10. **Make all specified business settings configurable.** Do not hardcode values that the administrator should control.
+
+11. **Support Arabic and English properly.** RTL and LTR must be implemented throughout the platform, not just translated text.
+
+12. **Use realistic, high-quality imagery.** Destination and product imagery should be relevant, attractive, and consistent with the brand.
+
+13. **Do not invent business features.** The blog is not part of the launch scope, and partners do not need accounts.
+
+14. **Test complete workflows.** A feature is not finished until its customer experience, administrator controls, database behavior, and edge cases have been tested.
+
+15. **Do not finalize hosting prematurely.** Hosting and production deployment are decisions for the final phase after development is complete.
+
+16. **Keep the code maintainable.** Use reusable components, clear naming, proper documentation, and a scalable architecture.
+
+17. **Do not sacrifice reliability for visual effects.** Animations and visual polish must never interfere with booking, payments, or accessibility.
+
+18. **Report progress clearly.** Maintain a list of completed features, remaining tasks, known issues, and decisions requiring clarification.
+
+---
+
+# FINAL PRODUCT EXPECTATION
+
+The final result should be a complete, polished, secure, bilingual travel and e-commerce platform that feels like a professional commercial product.
+
+Egyptian Discovery should stand out through its visual identity, destination discovery experience, smooth reservation system, customer rewards, and integrated camping shop.
+
+The most important outcome is a platform that the agency can operate independently through its admin dashboard, while customers can comfortably discover trips, reserve seats, complete payments, and manage their purchases from their phones.
+
+**Build Egyptian Discovery as one cohesive product, not a collection of unrelated website pages.**

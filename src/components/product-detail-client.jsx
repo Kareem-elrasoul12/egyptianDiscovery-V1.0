@@ -1,0 +1,6 @@
+"use client";
+import Link from "next/link";
+import {useState} from "react";
+import {useSite} from "./site-context";
+import {imageUrl} from "../data/content";
+export default function ProductDetailClient({product}){const {lang,addToCart,demo}=useSite();const [added,setAdded]=useState(false);const raw=product.images?.[0]||"photo-1470770841072-f978cf4d019e";const image=imageUrl(raw,1600,demo.media);return <main className="detail-page shop-detail"><Link href="/shop" className="back-link">← Field shop</Link><div className="product-detail-grid"><img src={image} alt={product.name_en}/><div><p className="eyebrow">{product.category?.name_en||"FIELD SHOP"} <i/></p><h1>{lang==="ar"?product.name_ar:product.name_en}</h1><p>{lang==="ar"?product.description_ar:product.description_en}</p><strong className="product-detail-price">{product.currency||"EGP"} {Number(product.price).toLocaleString("en-EG")}</strong>{product.preview&&<p className="preview-disclaimer">Illustrative preview · not a live offer</p>}<button className="button button-dark" onClick={()=>{addToCart({...product,image,image_source:raw});setAdded(true);}}>{added?"Added to bag":"Add to bag"} ↗</button>{added&&<p role="status"><Link href="/cart">View bag ↗</Link></p>}</div></div></main>}
