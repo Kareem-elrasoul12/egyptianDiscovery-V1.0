@@ -2,7 +2,8 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { copy, destinations, previewProducts, trips as tripSamples } from "../data/content";
-import { isDemoMode } from "../lib/supabase/config";
+import { isDemoMode, isSupabaseConfigured } from "../lib/supabase/config";
+import { createClient } from "../lib/supabase/client";
 
 const SiteContext = createContext(null);
 const STORAGE_KEY = "ed-demo-v2";
@@ -35,6 +36,57 @@ function initialDemo() {
 export function SiteProvider({ children }) {
   const [lang,setLang]=useState("en"),[theme,setTheme]=useState("light"),[cart,setCart]=useState([]);
   const [demo,setDemo]=useState(()=>isDemoMode()?initialDemo():emptyWorkspace()),[ready,setReady]=useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [currentProfile, setCurrentProfile] = useState(null);
+
+  useEffect(() => {
+    if (!isSupabaseConfigured()) return;
+    try {
+      const supabase = createClient();
+      if (!supabase) return;
+
+      const loadUser = async () => {
+        const { data: { user } } = await supabase.auth.getUser();
+        setCurrentUser(user || null);
+        if (user) {
+          const { data: prof } = await supabase.from("profiles").select("*").eq("id", user.id).maybeSingle();
+          setCurrentProfile(prof || null);
+        } else {
+          setCurrentProfile(null);
+        }
+      };
+      loadUser();
+
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+        const u = session?.user || null;
+        setCurrentUser(u);
+        if (u) {
+          const { data: prof } = await supabase.from("profiles").select("*").eq("id", u.id).maybeSingle();
+          setCurrentProfile(prof || null);
+        } else {
+          setCurrentProfile(null);
+        }
+      });
+
+      return () => subscription?.unsubscribe();
+    } catch {}
+  }, []);
+
+  const signOut = async () => {
+    try {
+      if (isSupabaseConfigured()) {
+        const supabase = createClient();
+        if (supabase) await supabase.auth.signOut();
+      }
+    } catch {}
+    setCurrentUser(null);
+    setCurrentProfile(null);
+    window.location.assign("/login");
+  };
+
+  const isAdmin = useMemo(() => {
+    return ["admin", "main_admin"].includes(currentProfile?.role);
+  }, [currentProfile]);
   useEffect(()=>{
     setLang(localStorage.getItem("ed-lang")||"en");setTheme(localStorage.getItem("ed-theme")||"light");
     try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");if(isDemoMode()){if(saved?.demo){const defaults=initialDemo();setDemo({...defaults,...saved.demo,settings:{...defaults.settings,...saved.demo.settings}});}if(saved?.cart)setCart(saved.cart);}else{setDemo(emptyWorkspace());setCart((saved?.cart||[]).filter(item=>item.dbId));}}catch{}
@@ -65,7 +117,7 @@ export function SiteProvider({ children }) {
   const createTrip=(trip)=>updateDemo(current=>({...current,trips:[{...trip,id:uid("trip"),slug:trip.name.toLowerCase().replace(/[^a-z0-9]+/g,"-"),priceValue:Number(trip.priceValue),paidTravelers:0,status:"gathering",preferred_dates:[trip.date],reservations:[]},...current.trips]}));
   const resetDemo=()=>{setDemo(initialDemo());setCart([]);};
 
-  const value=useMemo(()=>({lang,t:(key)=>copy[lang][key]||key,toggleLanguage,theme,toggleTheme,cart,addToCart,setCartQuantity,removeFromCart,clearCart,demo,demoReady:ready,updateDemo,createReservation,submitReservationPayment,joinWaitlist,createOrder,submitOrderPayment,reviewPayment,confirmTrip,completeTrip,updateOrderStatus,moderate,saveSetting,advanceDemoTime,createProduct,createTrip,resetDemo}),[lang,theme,cart,demo,ready]);
+  const value=useMemo(()=>({lang,t:(key)=>copy[lang][key]||key,toggleLanguage,theme,toggleTheme,cart,addToCart,setCartQuantity,removeFromCart,clearCart,demo,demoReady:ready,updateDemo,createReservation,submitReservationPayment,joinWaitlist,createOrder,submitOrderPayment,reviewPayment,confirmTrip,completeTrip,updateOrderStatus,moderate,saveSetting,advanceDemoTime,createProduct,createTrip,resetDemo,currentUser,currentProfile,isAdmin,signOut}),[lang,theme,cart,demo,ready,currentUser,currentProfile,isAdmin]);
   return <SiteContext.Provider value={value}>{children}</SiteContext.Provider>;
 }
 
