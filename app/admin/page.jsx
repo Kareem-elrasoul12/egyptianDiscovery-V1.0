@@ -2,6 +2,8 @@ import {redirect} from "next/navigation";
 import {createClient} from "../../src/lib/supabase/server";
 import {isDemoMode, isSupabaseConfigured} from "../../src/lib/supabase/config";
 import AdminDemo from "../../src/components/admin-demo";
+import AdminWorkspace from "../../src/components/admin-workspace";
+import AdminOperations from "../../src/components/admin-operations";
 
 export const metadata={title:"Operations · Egyptian Discovery"};
 export default async function AdminPage(){

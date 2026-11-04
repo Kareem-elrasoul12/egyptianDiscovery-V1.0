@@ -15,7 +15,7 @@ export default function TripDetailClient({trip}) {
   const tr=(english,arabic)=>ar?arabic:english;
   const router=useRouter();
   const [seats,setSeats]=useState(1);
-  const [preferredDates,setPreferredDates]=useState([]);
+  const [preferredDates,setPreferredDates]=useState(() => (trip.preferred_dates && trip.preferred_dates.length > 0) ? [trip.preferred_dates[0]] : []);
   const [busy,setBusy]=useState(false);
   const [message,setMessage]=useState("");
   const [hold,setHold]=useState(null),[waitlisted,setWaitlisted]=useState(false);
